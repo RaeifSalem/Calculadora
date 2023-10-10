@@ -1,6 +1,7 @@
 ﻿using System;
+using Calculadora; 
 
-namespace Calculator
+namespace Calculadora
 {
     class Program
     {
@@ -15,28 +16,15 @@ namespace Calculator
             Console.WriteLine("entre com a operação (+, -, *, /): ");
             string op = Console.ReadLine();
 
-            double result = 0;
+            double result = Calculadora.Calcular(op, num1, num2);
 
-            switch (op)
-            {
-                case "+":
-                    result = num1 + num2;
-                    break;
-                case "-":
-                    result = num1 - num2;
-                    break;
-                case "*":
-                    result = num1 * num2;
-                    break;
-                case "/":
-                    result = num1 / num2;
-                    break;
-                default:
-                    Console.WriteLine("Invalid operator.");
-                    break;
-            }
 
-            Console.WriteLine("Resultado: " + result);
+          
+            
+
+           
+          
+            Console.WriteLine("Resultado:" + result);
         }
     }
 }
